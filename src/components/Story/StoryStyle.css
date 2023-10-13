@@ -1,0 +1,13 @@
+:root {
+  --color1: #f1f2f2;
+  --color2: #ffffff;
+}
+
+.story__section {
+  background: transparent;
+  background-image: linear-gradient(
+    180deg,
+    var(--color1) 0%,
+    var(--color2) 100%
+  );
+}

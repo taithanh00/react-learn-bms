@@ -1,0 +1,21 @@
+/* .input__header {
+  transition: 0.3s ease;
+}
+.input__header:focus,
+input__header:hover {
+  outline: none;
+  border-color: rgba(234, 76, 137, 0.4);
+  background-color: transparent;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+@media  only screen and(max-width: 768px) {
+  .footer__button{
+    width: 100%; 
+    background-color: aqua !important;
+  }
+  .input__header { 
+    width: 100% !important;
+    
+  }
+} */

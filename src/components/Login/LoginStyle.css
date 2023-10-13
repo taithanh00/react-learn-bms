@@ -1,0 +1,20 @@
+.input__check::placeholder {
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.input__check:focus::placeholder {
+  font-size: 12px;
+  line-height: 12px;
+
+  transform: translateY(-85%);
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .login__content {
+    width: 458px !important;
+    height: 361px !important;
+    row-gap: 5px !important;
+  }
+}

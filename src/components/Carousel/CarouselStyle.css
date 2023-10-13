@@ -1,0 +1,20 @@
+img {
+  object-fit: cover;
+}
+
+.carousel > div {
+  padding: 15px;
+}
+.carousel__section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: -420px;
+  position: relative;
+  z-index: 1;
+}
+.carousel {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

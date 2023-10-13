@@ -1,0 +1,10 @@
+.input__header {
+  transition: 0.3s ease;
+}
+.input__header:focus,
+input__header:hover {
+  outline: none;
+  border-color: rgba(234, 76, 137, 0.4);
+  background-color: transparent;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}

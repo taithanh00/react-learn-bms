@@ -1,0 +1,19 @@
+img {
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .category {
+    display: grid;
+    grid-column: 1;
+    gap: 30px;
+  }
+  .span__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

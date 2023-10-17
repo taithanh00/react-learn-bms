@@ -61,7 +61,7 @@ const Story = () => {
                     sit amet tellus at pulvinar. Maecenas faucibus porta quam.
                   </p>
                   <p
-                    className="font-normal text-[15px] leading-[24px] mr-48 text-[#606060] smallest:w-full
+                    className="font-normal text-[15px] leading-[24px] mr-48 mb-12 text-[#606060] smallest:w-full
                   smallest:text-left
                   md:mr-0
                   lg:mr-48"
@@ -81,8 +81,8 @@ const Story = () => {
           </div>
         </div>
         <div className="story__parallax">
-          <div className="story__parallax__child">
-            <hr className="bg-white w-[51px] h-[2px]" />
+          <div className="story__parallax__content">
+            <hr className="bg-white w-[51px] h-[1px] mx-auto block relative bottom-4" />
             <p
               className="text-white font-bold text-[45px] leading-[45px] text-center
           smallest:text-[30px]
@@ -92,6 +92,7 @@ const Story = () => {
               Simplicity carried to an <br /> extreme becomes elegance
             </p>
           </div>
+          <div className="story__parallax__child"></div>
         </div>
         <div className="story__aboutus__content__2 w-full flex flex-col items-center justify-center mt-20 gap-y-3">
           <p className="tracking-[2px] leading-[1.25em] text-[0.8rem] font-normal">
@@ -105,10 +106,10 @@ const Story = () => {
           </h4>
           <hr className="bg-[#C19A83] w-[51px] h-[2px]" />
           <p
-            className="text-center mx-[23.7rem] font-normal text-[15px] leading-[24px] text-[#636363]
+            className="text-center mx-[27.5rem] font-normal text-[15px] leading-[24px] text-[#636363]
           smallest:mx-3
           md:mx-28
-          lg:mx-[23.7rem]"
+          lg:mx-[27.5rem]"
           >
             Proin nec ante eu sem luctus bibendum. Sed ut fringilla dolor. Morbi
             suscipit a nunc eu finibus. Nam rutrum mattis velit eget volutpat.
@@ -131,7 +132,8 @@ const Story = () => {
               className="story__founder__text__left w-1/2 flex flex-col relative z-[1] left-[65px] top-[200px] gap-y-7
             smallest:w-full smallest:flex smallest:flex-col smallest:relative smallest:top-0 smallest:left-0 smallest:text-center
             smallest:justify-center smallest:items-center smallest:mt-8 smallest:z-0 smallest:order-last
-            md:top-[100px] md:left-0"
+            md:top-[100px] md:left-0
+            lg:relative lg:left-[65px] lg:top-[200px] lg:gap-y-7"
             >
               <p className="text-[25px] leading-[28px] font-bold">
                 About the founder

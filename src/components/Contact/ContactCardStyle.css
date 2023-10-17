@@ -1,0 +1,7 @@
+.contact__card {
+  transition: box-shadow 0.3s;
+  float: left;
+}
+.contact__card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

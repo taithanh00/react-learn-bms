@@ -68,18 +68,23 @@ const Products = () => {
               />
             </div>
           </div>
-          <div className="product__arrivals w-full flex justify-between
-          smallest:mt-6 smallest:flex smallest:gap-y-6">
+          <div
+            className="product__arrivals w-full flex justify-between
+          smallest:mt-6 smallest:flex smallest:gap-y-6"
+          >
             <div className="arrivals_1 grid place-content-center gap-y-4">
-              <p className="font-normal text-[12px] leading-[15px] text-white tracking-[0.15rem] text-center">
-                New arrivals
-              </p>
-              <h2 className="text-center font-bold text-[45px] leading-[45px] text-white">
-                Brand new, modern lamps collection{" "}
-              </h2>
-              <p className="font-normal text-[22px] leading-[26px] text-white text-center">
-                Ideal for offices, bedrooms and all in between.
-              </p>
+              <div className="arrivals__1__content">
+                <p className="font-normal text-[12px] leading-[15px] text-white tracking-[0.15rem] text-center">
+                  New arrivals
+                </p>
+                <h2 className="text-center font-bold text-[45px] leading-[45px] text-white">
+                  Brand new, modern lamps collection{" "}
+                </h2>
+                <p className="font-normal text-[22px] leading-[26px] text-white text-center">
+                  Ideal for offices, bedrooms and all in between.
+                </p>
+              </div>
+              <div className="arrival__1__child"></div>
             </div>
             <div className="arrivals_2 flex flex-col flex-nowrap">
               <div className="grid place-content-center place-items-center h-full object-contain gap-y-6">

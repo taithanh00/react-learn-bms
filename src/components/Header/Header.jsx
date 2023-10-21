@@ -56,7 +56,7 @@ const Header = () => {
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
               <ul className="menu flex items-center gap-[29px] cursor-pointer">
                 <li className=" nav-zoom text-[14px] leading-[80px] font-normal hover:text-[#c19a83]">
-                  <Link to="/">SHOP ALL</Link>
+                  <Link to="/shopall">SHOP ALL</Link>
                 </li>
                 <li className=" nav-zoom text-[14px] leading-[80px] font-normal hover:text-[#c19a83]">
                   DECOR
@@ -87,7 +87,7 @@ const Header = () => {
                   TRACK ORDER
                 </li>
                 <li className="nav-zoom text-[12px] leading-[80px] font-normal hover:text-[#c19a83]">
-                  HELP
+                  <Link to="/help">Help</Link>
                 </li>
                 <li className="nav-zoom text-[12px] leading-[80px] font-normal hover:text-[#c19a83]">
                   <Link to="/login">Log In</Link>

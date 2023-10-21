@@ -40,12 +40,37 @@
 }
 .arrivals_1 {
   width: calc(66% + 5px);
-  min-height: 700px;
-  object-fit: cover;
+  height: 700px;
+  object-fit: contain;
   background-image: url("https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/bg-01.jpg");
   margin-top: 0.8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+}
+.arrivals__1__content {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 1;
+  color: #ffffff;
+  display: grid;
+  gap: 10px;
+}
+.arrival__1__child {
+  width: 100%;
+  min-height: 700px;
+  position: absolute;
   background-color: var(--arrivals1);
-  opacity: 2;
+  opacity: 0.3 !important;
+  z-index: 1;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .arrivals_2 {
   width: calc(33% - 3px);
@@ -56,11 +81,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-  .arrivals_1,
-  .arrivals_2 {
-    width: 100%;
-    margin: 0 auto;
   }
 }
 @media only screen and(max-width: 768px) {

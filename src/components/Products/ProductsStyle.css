@@ -12,7 +12,9 @@
   width: 157px;
   height: 100px;
 }
-
+/* .products__card__img:hover{
+ transform: scale(1.3);
+} */
 .right__button__up,
 .right__button__down {
   position: absolute;
@@ -75,6 +77,18 @@
 .arrivals_2 {
   width: calc(33% - 3px);
   margin-top: 0.8rem;
+}
+.product__card__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  color: black;
+  box-shadow: 24;
+  border: 2px solid #000;
+  padding: 4px;
 }
 @media only screen and (max-width: 768px) {
   .product__arrivals {

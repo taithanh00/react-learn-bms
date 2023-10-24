@@ -1,12 +1,13 @@
-// import React from 'react'
-import ImgProduct01 from "../../assets/products/productshomepage/product01.jpg";
-import ImgProduct02 from "../../assets/products/productshomepage/product02.jpg";
-import ImgProduct03 from "../../assets/products/productshomepage/product03.jpg";
-import ImgProduct04 from "../../assets/products/productshomepage/product04.jpg";
-import ImgProduct05 from "../../assets/products/productshomepage/product05.jpg";
-import ImgProduct06 from "../../assets/products/productshomepage/product06.jpg";
+// // import React from 'react'
+// import ImgProduct01 from "../../assets/products/productshomepage/product01.jpg";
+// import ImgProduct02 from "../../assets/products/productshomepage/product02.jpg";
+// import ImgProduct03 from "../../assets/products/productshomepage/product03.jpg";
+// import ImgProduct04 from "../../assets/products/productshomepage/product04.jpg";
+// import ImgProduct05 from "../../assets/products/productshomepage/product05.jpg";
+// import ImgProduct06 from "../../assets/products/productshomepage/product06.jpg";
 import ImgProduct08 from "../../assets/products/productshomepage/product08.png";
 import ProductsCard from "./ProductsCard/ProductsCard";
+import { ProductsList } from "../../assets/data/ProductList";
 import "./ProductsStyle.css";
 const Products = () => {
   // const [img, setImg] = useState(ImgProduct01);
@@ -36,36 +37,9 @@ const Products = () => {
             xl:grid xl:grid-cols-3 xl:pt-14 xl:gap-3 
             2xl:grid 2xl:grid-cols-3 2xl:pt-14 2xl:gap-3"
             >
-              <ProductsCard
-                img={ImgProduct01}
-                name="Product Name 10"
-                price="$85.00 – $99.00"
-              />
-              <ProductsCard
-                img={ImgProduct02}
-                name="Product Name 1"
-                price="$85.00 – $99.00"
-              />
-              <ProductsCard
-                img={ImgProduct03}
-                name="Product Name 13"
-                price="$85.00 – $99.00"
-              />
-              <ProductsCard
-                img={ImgProduct04}
-                name="Product Name 12"
-                price="$85.00 – $99.00"
-              />
-              <ProductsCard
-                img={ImgProduct05}
-                name="Product Name 2"
-                price="$85.00 – $99.00"
-              />
-              <ProductsCard
-                img={ImgProduct06}
-                name="Product Name 11"
-                price="$85.00 – $99.00"
-              />
+              {ProductsList.slice(0, 6).map((productsmap) => (
+                <ProductsCard key={productsmap.id} productsmap={productsmap} />
+              ))}
             </div>
           </div>
           <div

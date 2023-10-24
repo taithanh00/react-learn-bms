@@ -4,6 +4,7 @@ import Story from "../components/Story/Story";
 import Contact from "../components/Contact/Contact";
 import Help from "../components/Help/Help";
 import ShopAll from "../components/ShopAll/ShopAll";
+import ProductDetail from "../components/Products/ProductDetail/ProductDetail";
 import { Routes, Route } from "react-router-dom";
 const Routers = () => {
   return (
@@ -16,6 +17,10 @@ const Routers = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/help" element={<Help />} />
         <Route path="/shopall" element={<ShopAll />} />
+        <Route
+          path="/shopall/products/productsdetail/:productId"
+          element={<ProductDetail />}
+        />
         {/* <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} /> */}

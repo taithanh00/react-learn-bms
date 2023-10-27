@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { ProductsList } from "../../../assets/data/ProductList";
 const ProductsCard = ({ productsmap }) => {
   const {
+    id,
     name,
     ProductimgBlack,
     ProductimgBrown,
@@ -99,39 +100,31 @@ const ProductsCard = ({ productsmap }) => {
                 className="product__img flex justify-center items-center object-contain pr-5"
               />
             </div>
-            {ProductsList.map(
-              (product) =>
-                isHovered && (
-                  <div
-                    className="right__button absolute top-5 right-5 flex flex-col gap-y-3"
-                    key={product.id}
+            {isHovered && (
+              <div className="right__button absolute top-5 right-5 flex flex-col gap-y-3">
+                <div className="product__icon__up h-[32px] w-[32px] rounded-full bg-white">
+                  <Tippy
+                    content="Select options"
+                    className="text-[12px] font-normal leading-[14px]"
+                    placement="left"
                   >
-                    <div className="product__icon__up h-[32px] w-[32px] rounded-full bg-white">
-                      <Tippy
-                        content="Select options"
-                        className="text-[12px] font-normal leading-[14px]"
-                        placement="left"
-                      >
-                        <Link
-                          to={`/shopall/products/productsdetail/${product.id}`}
-                        >
-                          <MdStorefront className="product__icon mx-auto mt-2" />
-                        </Link>
-                      </Tippy>
-                    </div>
-                    <div className="product__icon__down h-[32px] w-[32px] rounded-full bg-white">
-                      <Tippy
-                        className="text-[12px] font-normal leading-[14px]"
-                        content="Quick View"
-                        placement="left"
-                      >
-                        <Link>
-                          <IoEyeSharp className="mx-auto mt-2" />
-                        </Link>
-                      </Tippy>
-                    </div>
-                  </div>
-                )
+                    <Link to={`/shopall/products/productsdetail/${id}`}>
+                      <MdStorefront className="product__icon mx-auto mt-2" />
+                    </Link>
+                  </Tippy>
+                </div>
+                <div className="product__icon__down h-[32px] w-[32px] rounded-full bg-white">
+                  <Tippy
+                    className="text-[12px] font-normal leading-[14px]"
+                    content="Quick View"
+                    placement="left"
+                  >
+                    <Link>
+                      <IoEyeSharp className="mx-auto mt-2" />
+                    </Link>
+                  </Tippy>
+                </div>
+              </div>
             )}
           </div>
           <div className="product__text grid place-content-center gap-4">

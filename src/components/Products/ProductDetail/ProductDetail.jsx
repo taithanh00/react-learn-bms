@@ -24,6 +24,11 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import Checkbox from "@mui/material/Checkbox";
+import ProductDetailCard from "./ProductDetailCard";
+import ProductName8 from "../../../assets/shopall/product-08-black.png";
+import ProductName12 from "../../../assets/shopall/product-12-black.png";
+import ProductName15 from "../../../assets/shopall/product-15-black.png";
+import ProductName10 from "../../../assets/shopall/product-10-black.png";
 const ProductDetail = () => {
   const { productId } = useParams();
   const thisProduct = ProductsList.find((prod) => prod.id === productId);
@@ -74,7 +79,7 @@ const ProductDetail = () => {
                 <img
                   src={thisProduct.ProductimgBlack}
                   alt=""
-                  className="object-cover w-full h-[790px]"
+                  className="object-cover w-full h-[790px] smallest:h-auto"
                 />
               </div>
               <div className="product__detail__container__left__bottom flex flex-row gap-1 justify-between items-center w-full h-auto">
@@ -95,12 +100,15 @@ const ProductDetail = () => {
               </div>
             </div>
             <div className="product__detail__container__right w-1/2 flex flex-col mt-7">
-              <div className="product__detail__container__right__first pl-10 flex flex-col gap-y-5">
+              <div
+                className="product__detail__container__right__first pl-10 flex flex-col gap-y-5 
+              smallest:w-screen smallest:pl-0"
+              >
                 <div className="flex flex-row items-center justify-between">
                   <p className="font-normal text-[14px] leading-[24px] text-[#A5A5A5]">
                     Home / Bedroom / {thisProduct.name}
                   </p>
-                  <div className="flex flex-row gap-x-1 w-[70px] h-[29px]">
+                  <div className="flex flex-row gap-x-1 w-[70px] h-[29px] smallest:mr-7">
                     <div className="h-full w-[27px] border-[1px] flex justify-center items-center border-black">
                       <Link className="flex justify-center items-center">
                         <FontAwesomeIcon
@@ -179,7 +187,10 @@ const ProductDetail = () => {
                 </div>
                 <hr className="w-full mt-[1.75rem]" />
               </div>
-              <div className="product__detail__container__right__second pl-10 flex flex-row justify-start items-start mt-3">
+              <div
+                className="product__detail__container__right__second pl-10 flex flex-row justify-start items-start mt-3
+              smallest:w-screen smallest:pl-0"
+              >
                 <div
                   className="product__detail__hovering w-[37px] h-[33px] bg-white text-black 
                 grid place-content-center place-items-center border-[1px] border-solid border-[#00000012] cursor-pointer"
@@ -226,7 +237,7 @@ const ProductDetail = () => {
                   </span>
                 </p>
               </div>
-              <div className="product__detail__container__right__fourth pl-10">
+              <div className="product__detail__container__right__fourth pl-10 smallest:w-screen smallest:pl-0 smallest:pr-5">
                 <fieldset className="h-[100px] w-full border-[1px] border-solid border-[var(#666666)] text-center">
                   <legend className="font-semibold text-[15px] leading-[24px] text-[#666666]">
                     Guaranteed Safe Checkout
@@ -271,7 +282,10 @@ const ProductDetail = () => {
                   </ul>
                 </fieldset>
               </div>
-              <div className="product__detail__container__right__fifth pl-10 flex flex-col items-start justify-start mt-4 gap-y-3">
+              <div
+                className="product__detail__container__right__fifth pl-10 flex flex-col items-start justify-start mt-4 gap-y-3
+              smallest:w-screen"
+              >
                 <p className="font-semibold text-[15px] leading-[24px] text-[#636363]">
                   Free shipping on orders over $50!
                 </p>
@@ -319,7 +333,7 @@ const ProductDetail = () => {
               <div
                 className={` ${
                   isOpen && " text-white border-none"
-                } w-7 h-7 lg:w-8 lg:h-8  rounded flex items-center justify-center mr-5`}
+                } w-7 h-7 lg:w-8 lg:h-8  rounded flex items-center justify-center mr-5 smallest:mr-3  `}
               >
                 {isOpen ? (
                   <FontAwesomeIcon
@@ -692,40 +706,45 @@ const ProductDetail = () => {
                       id=""
                       cols="220"
                       rows="5"
-                      className="border-[1px] mt-2 text-[15px] leading-[24px] font-normal text-[#111111] pl-3 pt-2"
+                      className="border-[1px] mt-2 text-[15px] leading-[24px] font-normal text-[#111111] pl-3 pt-2 smallest:w-[258px] smallest:h-auto"
                     ></textarea>
                   </div>
                 </div>
-                <div className="flex flex-row justify-between items-center w-full gap-x-0">
-                  <div className="w-1/2 flex flex-col">
+                <div
+                  className="flex flex-row justify-between items-center w-full gap-x-0 smallest:flex smallest:flex-col smallest:w-full
+                smallest:justify-start smallest:items-start"
+                >
+                  <div className="w-1/2 flex flex-col smallest:w-full smallest:ml-[-12px]">
                     <p className="font-normal text-[15px] leading-[24px] text-[#636363]">
                       Name *
                     </p>
                     <input
                       type="text"
-                      className="w-[645px] h-[48px] border-[1px] active:border-none font-normal text-[15px] leading-[24px] text-[#111111] pl-2"
+                      className="w-[645px] h-[48px] border-[1px] active:border-none font-normal text-[15px] leading-[24px] text-[#111111] pl-2
+                      smallest:pl-0 smallest:w-full"
                     />
                   </div>
-                  <div className="w-1/2 flex flex-col">
+                  <div className="w-1/2 flex flex-col smallest:w-full  smallest:ml-[-12px]">
                     <p className="font-normal text-[15px] leading-[24px] text-[#636363]">
                       Email *
                     </p>
                     <input
                       type="text"
-                      className="w-[645px] h-[48px] border-[1px] active:border-none font-normal text-[15px] leading-[24px] text-[#111111] pl-2"
+                      className="w-[645px] h-[48px] border-[1px] active:border-none font-normal text-[15px] leading-[24px] text-[#111111] pl-2
+                      smallest:pl-0 smallest:w-full smallest:pr-3"
                     />
                   </div>
                 </div>
                 <div className="w-full flex flex-row justify-start items-center">
-                  <label className="flex items-center cursor-pointer">
-                    <Checkbox {...label} className="mr-5" />
+                  <label className="flex items-center cursor-pointer smallest:mr-[2.5rem]">
+                    <Checkbox {...label} className="mr-5 " />
                     <p className="font-normal text-[15px] leading-[24px] ml-2">
                       Save my name, email, and website in this browser for the
                       next time I comment.
                     </p>
                   </label>
                 </div>
-                <div className="mb-10">
+                <div className="mb-10 smallest:grid smallest:place-content-center smallest:place-items-center smallest:mx-auto  ">
                   <button className="w-[94px] h-[46px] bg-black text-white font-normal text-[15px] leading-[15px] hover:bg-[#c19a83]">
                     SUBMIT
                   </button>
@@ -733,15 +752,34 @@ const ProductDetail = () => {
               </div>
             </div>
           )}
-          <div className="flex flex-col justify-start items-start mt-10 w-full">
+          <div className="flex flex-col justify-start items-start mt-10 w-full smallest:w-screen smallest:mx-0 smallest:grid smallest:place-content-center smallest:place-items-center">
             <p className="font-bold text-[45px] leading-[45px] text-[#000000]">
               Related products
             </p>
-            <div className="grid grid-cols-4 w-full place-content-center place-items-center">
-              <p>hi</p>
-              <p>hi</p>
-              <p>hi</p>
-              <p>hi</p>
+            <div
+              className="grid grid-cols-4 w-full place-content-center place-items-center
+            smallest:grid smallest:grid-cols-1 smallest:w-full smallest:gap-y-3 smallest:place-content-center smallest:place-items-center"
+            >
+              <ProductDetailCard
+                img={ProductName8}
+                name="Product Name 8"
+                price="$85.00 – $99.00"
+              />
+              <ProductDetailCard
+                img={ProductName12}
+                name="Product Name 12"
+                price="$85.00 – $99.00"
+              />
+              <ProductDetailCard
+                img={ProductName15}
+                name="Product Name 15"
+                price="$85.00 – $99.00"
+              />
+              <ProductDetailCard
+                img={ProductName10}
+                name="Product Name 10"
+                price="$85.00 – $99.00"
+              />
             </div>
           </div>
         </div>

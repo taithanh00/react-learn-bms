@@ -20,6 +20,16 @@ const Header = () => {
         headerRef.current.classList.remove("sticky__header");
       }
     });
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("sticky__header__change__color");
+      } else {
+        headerRef.current.classList.remove("sticky__header__change__color");
+      }
+    });
   };
   useEffect(() => {
     handleStickyHeader();
@@ -59,16 +69,16 @@ const Header = () => {
                   <Link to="/shopall">SHOP ALL</Link>
                 </li>
                 <li className=" nav-zoom text-[14px] leading-[80px] font-normal hover:text-[#c19a83]">
-                  DECOR
+                  <Link to="/decor">DECOR</Link>
                 </li>
                 <li className=" nav-zoom text-[14px] leading-[80px] font-normal hover:text-[#c19a83]">
-                  OFFICE
+                  <Link to="/office">OFFICE</Link>
                 </li>
                 <li className=" nav-zoom text-[14px] leading-[80px] font-normal hover:text-[#c19a83]">
-                  LIVING ROOM
+                  <Link to="/livingroom">LIVING ROOM</Link>
                 </li>
                 <li className=" nav-zoom text-[14px] leading-[80px] font-normal hover:text-[#c19a83]">
-                  BEDROOM
+                  <Link to="/bedroom">BEDROOM</Link>
                 </li>
                 <li className=" nav-zoom text-[14px] leading-[80px] font-normal hover:text-[#c19a83]">
                   <HeaderButton className="w-5 h-5" />

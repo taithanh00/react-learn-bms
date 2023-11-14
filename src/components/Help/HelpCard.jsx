@@ -17,7 +17,8 @@ const HelpCard = ({ icon, title, content, redirect }) => {
 
   return (
     <>
-      <div className="help__card__container lg:w-[379px] lg:h-[334px] bg-white rounded-2xl border-2 flex items-center justify-center">
+      <div className="help__card__container lg:w-[379px] lg:h-[334px] bg-white rounded-2xl border-2 flex items-center justify-center
+      smallest:py-5">
         <div className="help__card__content grid place-content-center place-items-center gap-y-3">
           <span className="lg:w-[30px] lg:h-[30px] bg-white rounded-full border-[1px] border-[#C19A83] flex items-center justify-center">
             {icon}

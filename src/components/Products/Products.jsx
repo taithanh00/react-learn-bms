@@ -9,18 +9,29 @@ import ImgProduct08 from "../../assets/products/productshomepage/product08.png";
 import ProductsCard from "./ProductsCard/ProductsCard";
 import { ProductsList } from "../../assets/data/ProductList";
 import "./ProductsStyle.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Products = () => {
   // const [img, setImg] = useState(ImgProduct01);
 
   // const handleChangeImg = (newImg) => {
   //   setImg(newImg);
   // };
+  useEffect(() => {
+    AOS.init(); // Khởi tạo AOS
+  }, []);
   return (
     <>
       <section>
         <div className="container">
           <div className="product w-full h-auto flex flex-col justify-between items-center smallest:grid smallest:grid-cols-1 ">
-            <div className="product__text">
+            <div
+              className="product__text"
+              data-aos="flip-down"
+              data-aos-duration="800"
+              data-aos-once="false"
+            >
               <p className="font-normal text-[12px] leading-[15px] tracking-[0.2rem] text-[#636363] mb-5 text-center">
                 Shop by Category
               </p>
@@ -36,6 +47,8 @@ const Products = () => {
             lg:grid lg:grid-cols-3 lg:pt-14 lg:gap-3
             xl:grid xl:grid-cols-3 xl:pt-14 xl:gap-3 
             2xl:grid 2xl:grid-cols-3 2xl:pt-14 2xl:gap-3"
+              data-aos="zoom-in"
+              data-aos-duration="1200"
             >
               {ProductsList.slice(0, 6).map((productsmap) => (
                 <ProductsCard key={productsmap.id} productsmap={productsmap} />
@@ -46,7 +59,9 @@ const Products = () => {
             className="product__arrivals w-full flex justify-between
           smallest:mt-6 smallest:flex smallest:gap-y-6"
           >
-            <div className="arrivals_1 grid place-content-center gap-y-4">
+            <div className="arrivals_1 grid place-content-center gap-y-4"
+             data-aos="fade-right"
+             data-aos-duration="1200">
               <div className="arrivals__1__content">
                 <p className="font-normal text-[12px] leading-[15px] text-white tracking-[0.15rem] text-center">
                   New arrivals
@@ -60,7 +75,11 @@ const Products = () => {
               </div>
               <div className="arrival__1__child"></div>
             </div>
-            <div className="arrivals_2 flex flex-col flex-nowrap">
+            <div
+              className="arrivals_2 flex flex-col flex-nowrap"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
               <div className="grid place-content-center place-items-center h-full object-contain gap-y-6">
                 <img src={ImgProduct08} alt="" />
                 <p className="pt-[20px] font-normal leading-[26px] text-[22px] text-[#000000] text-center">

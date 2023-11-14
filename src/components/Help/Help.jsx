@@ -32,7 +32,8 @@ const Help = () => {
               <span className="bg-[#C19A83] w-[51px] h-[2px] mt-[8px]" />
             </div>
           </div>
-          <div className="flex flex-row justify-center items-center gap-x-5 smallest:flex smallest:flex-col smallest:w-full">
+          <div className="flex flex-row justify-center items-center gap-x-5 smallest:flex smallest:flex-col smallest:w-full
+          smallest:gap-y-3">
             <HelpCard
               icon={
                 <FontAwesomeIcon icon={faUser} style={{ color: "#c19a83" }} />

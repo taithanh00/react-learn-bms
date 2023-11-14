@@ -46,7 +46,8 @@ const ShopAll = () => {
                   </select>
                 </form>
               </div>
-              <div className="grid grid-cols-3 gap-6 place-content-center place-items-center">
+              <div className="grid grid-cols-3 gap-6 place-content-center place-items-center
+              smallest:grid smallest:grid-cols-1">
                 {ProductsList.map((productsmap) => (
                   <ProductsCard
                     key={productsmap.id}

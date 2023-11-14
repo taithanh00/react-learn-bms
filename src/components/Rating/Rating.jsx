@@ -1,11 +1,24 @@
 // import React from 'react'
 import RatingCard from "./RatingCard/RatingCard";
 import "./RatingStyle.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Rating = () => {
+  useEffect(() => {
+    AOS.init(); // Khởi tạo AOS
+  }, []);
   return (
     <>
       <div className="container">
-        <div className="rating__container flex justify-between items-center gap-3 mb-5 smallest:flex smallest:flex-col smallest:w-full">
+        <div
+          className="rating__container flex justify-between items-center gap-3 mb-5 smallest:flex smallest:flex-col smallest:w-full"
+          data-aos="zoom-out"
+          data-aos-duration="800"
+          data-aos-once="false"
+          data-aos-mirror="true"
+        >
           <RatingCard
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
             author="MARIA OLIVER"

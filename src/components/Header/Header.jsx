@@ -103,7 +103,9 @@ const Header = () => {
                   <Link to="/login">Log In</Link>
                 </li>
                 <li className="nav-zoom text-[12px] leading-[80px] font-normal hover:text-[#c19a83]">
-                  <AiOutlineShoppingCart className="w-5 h-5" />
+                  <Link to="/cart">
+                    <AiOutlineShoppingCart className="w-5 h-5" />
+                  </Link>
                 </li>
               </ul>
             </div>

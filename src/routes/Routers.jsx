@@ -5,6 +5,11 @@ import Contact from "../components/Contact/Contact";
 import Help from "../components/Help/Help";
 import ShopAll from "../components/ShopAll/ShopAll";
 import ProductDetail from "../components/Products/ProductDetail/ProductDetail";
+import Cart from "../components/Cart/Cart";
+import Decor from "../components/Decor/Decor";
+import Office from "../components/Office/Office";
+import LivingRoom from "../components/LivingRoom/LivingRoom";
+import BedRoom from "../components/BedRoom/BedRoom";
 import { Routes, Route } from "react-router-dom";
 const Routers = () => {
   return (
@@ -21,6 +26,11 @@ const Routers = () => {
           path="/shopall/products/productsdetail/:productId"
           element={<ProductDetail />}
         />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/decor" element={<Decor />} />
+        <Route path="/office" element={<Office />} />
+        <Route path="/livingroom" element={<LivingRoom />} />
+        <Route path="/bedroom" element={<BedRoom />} />
         {/* <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} /> */}

@@ -752,7 +752,7 @@ const ProductDetail = () => {
               </div>
             </div>
           )}
-          <div className="flex flex-col justify-start items-start mt-10 w-full smallest:w-screen smallest:mx-0 smallest:grid smallest:place-content-center smallest:place-items-center">
+          <div className="flex flex-col justify-start items-start mt-10 w-full smallest:w-full smallest:mx-0 smallest:grid smallest:place-items-center smallest:gap-y-10">
             <p className="font-bold text-[45px] leading-[45px] text-[#000000]">
               Related products
             </p>
